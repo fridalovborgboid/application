@@ -1,0 +1,63 @@
+.message {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-family: "League Spartan", sans-serif;
+  padding: 0.25rem 0.75rem;
+  background-color: lightblue;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+}
+
+.message button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-radius: calc(var(--icon-target) / 2);
+  width: var(--icon-target);
+  height: var(--icon-target);
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  transition: border 0.3s ease;
+  padding: 0;
+  justify-content: center;
+
+  &:hover {
+    border: 1px solid var(--text-color);
+    background-color: transparent;
+  }
+}
+
+.message button svg {
+  color: var(--text-color);
+}
+
+.message[data-severity="info"] {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.message[data-severity="error"] {
+  background-color: var(--danger-bg-color);
+  color: var(--danger-color);
+  border: 1px solid var(--danger-color);
+
+}
+
+.message[data-severity="success"] {
+  background-color: var(--success-bg-color);
+  color: var(--success-color);
+  border: 1px solid var(--success-color);
+}
+
+.messageText {
+  margin: 0.5rem 0;
+}
+
+.details {
+  font-weight: var(--font-regular);
+  color: var(--text-color);
+}

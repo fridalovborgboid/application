@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --dark-purple: #201355;
+  --light-purple: #4f4789;;
+  --primary-color: #440dc3;
+  --primary-bg-color: #e2d8f8;
+  --danger-color: #d80000;
+  --danger-bg-color: #fdeaea;
+  --success-color: #017a2d;
+  --success-bg-color: #d6fae3;
+  --border-radius: 6px;
+  --icon-target: 24px;
+  --text-color: #333333;
+  --border-color: #6E6E65;
+  --disabled-color: #B3B3B3;
+  --font-bold: 600;
+  --font-regular: 400;
+  --font-light: 300;
+}
+
+body {
+  color: var(--text-color);
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--font-light);
+  font-style: normal;
+  background-color: #FFF3DB;
+  margin: 2rem;
+}
+
+main,
+header {
+  max-width: 920px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+legend {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--font-bold);
+  font-style: normal;
+  color: var(--dark-purple);
+}
+
+sup.required {
+  color: var(--danger-color);
+  font-size: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-flow: row wrap;
+}
+
+.help-text {
+  font-size: 0.875rem;
+  margin: 0.5rem 0;
+}
+
+.help-text[data-severity="error"] {
+  color: var(--danger-color);
+  font-weight: var(--font-bold);
+}
