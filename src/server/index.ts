@@ -17,7 +17,7 @@ app.post('/application', (req, res) => {
     return res.status(400).json({ errors });
   } else {
     console.log( "Received application data:", req.body);
-    res.send({success: "Anmälan till lägerverksamhet har skickats in!", data: req.body});
+    res.send({success: "Anmälan till lägerverksamhet har skickats in!", responseData: req.body});
   }
 });
 

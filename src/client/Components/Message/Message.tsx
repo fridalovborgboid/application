@@ -8,7 +8,7 @@ type MessageProp = {
   severity: "info" | "error" | "success";
   message: string;
   ariaLabel?: string;
-  data?: ApplicationData;
+  responseData?: ApplicationData;
   onRemove?: () => void;
 };
 
@@ -16,7 +16,7 @@ export default function Message({
   severity,
   message,
   ariaLabel,
-  data,
+  responseData,
   onRemove,
 }: MessageProp) {
   const getSeverityIcon = (() => {
@@ -43,15 +43,15 @@ export default function Message({
           </button>
         )}
       </div>
-      {data && (
+      {responseData && (
         <>
           <h2>Inskickade uppgifter</h2>
           <ul className={styles.details}>
-            {data && data.name && <li>{data.name}</li>}
-            {data && data.email && <li>{data.email}</li>}
-            {data && data.activities && data.activities.length > 0 && (
+            {responseData && responseData.name && <li>{responseData.name}</li>}
+            {responseData && responseData.email && <li>{responseData.email}</li>}
+            {responseData && responseData.activities && responseData.activities.length > 0 && (
               <li>
-                Aktiviteter: {data.activities.map(activity => getActivityLabel(activity)).join(', ')}
+                Aktiviteter: {responseData.activities.map(activity => getActivityLabel(activity)).join(', ')}
               </li>
             )}
           </ul>

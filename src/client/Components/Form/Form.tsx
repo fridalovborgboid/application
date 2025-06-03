@@ -175,7 +175,7 @@ export default function Form() {
         <Message
           severity={responseMessage?.success ? "success" : "error"}
           message={responseMessage?.success || responseMessage?.fail || ""}
-          data={responseMessage?.data && responseMessage?.data}
+          responseData={responseMessage?.responseData && responseMessage?.responseData}
           ariaLabel="Ta bort meddelande"
           onRemove={() => clearMessages()}
         />

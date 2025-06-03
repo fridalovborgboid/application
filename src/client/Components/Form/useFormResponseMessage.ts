@@ -4,7 +4,7 @@ import { useState } from "react";
 export type ResponseMessage = Partial<Record<string, string>> & {
   success?: string;
   fail?: string;
-  data?: ApplicationData;
+  responseData?: ApplicationData;
 };
 
 const serverFailMessage = "Ett fel uppstod vid inlämning av formuläret. Testa igen!";
